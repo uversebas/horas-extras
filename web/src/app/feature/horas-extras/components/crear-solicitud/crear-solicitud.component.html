@@ -1,0 +1,54 @@
+<div class="general-content">
+    <h1 class="titulo-componente">Crear solicitud</h1>
+    <form class="form-columns contenedor" [formGroup]="crearSolicitudForm" (submit)="enverSolicitud()">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="flex-between mt-3">
+                    <div class="d-flex cont-checks">
+                        <div class="cont-check">
+                            <label class="container-radio">
+                                <div class="label-check">Días</div>
+                                <input type="radio" name='radio' value="tiposSolicitud[radioDias]" [checked]="true"
+                                    (change)=onChangeTipoSolicitud(tiposSolicitud[radioDias])>
+                                <span class="checkmark-radio"></span>
+                            </label>
+                        </div>
+                        <div class="cont-check">
+                            <label class="container-radio">
+                                <div class="label-check">Dinero</div>
+                                <input type="radio" name='radio' value="tiposSolicitud[radioDinero]"
+                                    (change)=onChangeTipoSolicitud(tiposSolicitud[radioDinero])>
+                                <span class="checkmark-radio"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="cantidadDias" class="form-label">Cantidad de días <span>*</span></label>
+                <input formControlName="cantidadDias" id="cantidadDias" type="number" class="form-control">
+                <small class="help-block text-danger"
+                    *ngIf="(crearSolicitudForm.get('cantidadDias')!.hasError('min'))">
+                    * La cantidad de días debe ser al menos 1
+                </small>
+            </div>
+        </div>
+        <br>
+        <div class="line"></div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <textarea autosize name="motivo" id="motivo" formControlName="motivo" class="form-control" rows="3"
+                    placeholder="Motivo de la solicitud..." style="resize: none"></textarea>
+            </div>
+        </div>
+        <br>
+        <div class="line"></div>
+        <br>
+        <div class="zona-botones">
+            <button (click)="cancelar()" class="boton-base boton-secundario">Cancelar</button>
+            <button class="boton-base boton-primario" [disabled]="crearSolicitudForm.invalid"
+                type="submit">Enviar</button>
+        </div>
+    </form>
+</div>

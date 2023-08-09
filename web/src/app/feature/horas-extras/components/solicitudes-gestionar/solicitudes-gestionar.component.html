@@ -1,0 +1,38 @@
+<div class="general-content">
+    <h1 class="titulo-componente">Gestionar solicitudes</h1>
+    <div class="informe-tabla mt-4">
+        <div class="tabla-responsive">
+            <table mat-table [dataSource]="misSolicitudes" matSort (matSortChange)="onSortData()" matSortActive="Fecha"
+                matSortDisableClear aria-describedby="informeTable">
+                <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header scope="col">Id</th>
+                    <td mat-cell *matCellDef="let row">{{row.id}}</td>
+                </ng-container>
+                <ng-container matColumnDef="tipo">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header scope="col">Tipo</th>
+                    <td mat-cell *matCellDef="let row">{{row.tipo}}</td>
+                </ng-container>
+                <ng-container matColumnDef="dias">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header scope="col">Días</th>
+                    <td mat-cell *matCellDef="let row">{{row.dias}}</td>
+                </ng-container>
+                <ng-container matColumnDef="estado">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header scope="col">Estado</th>
+                    <td mat-cell *matCellDef="let row">{{row.estado}}</td>
+                </ng-container>                
+                <ng-container matColumnDef="fecha">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header scope="col">Fecha solicitud</th>
+                    <td mat-cell *matCellDef="let row">{{row.fechaSolicitud| date:'dd-MM-yyyy'}}</td>
+                </ng-container>
+                <ng-container matColumnDef="detalle">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header scope="col">Detalle</th>
+                    <td mat-cell *matCellDef="let row">
+                        <img src="../../../../../assets/svg/view.png" alt="ver" (click)="verDetalle(row)">
+                    </td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+    </div>
+</div>

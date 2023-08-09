@@ -1,0 +1,12 @@
+@mixin boton($borde,$color,$background)
+    border: 1px solid $borde
+    color: $color
+    background: $background
+    transition: all ease-in-out 0.3s
+    &:hover:not([disabled])
+        background: darken($background, 5%)
+    &:focus:not(:focus-visible) 
+        outline: none
+    &:focus-visible
+        border: 1px solid $neutral-500
+        

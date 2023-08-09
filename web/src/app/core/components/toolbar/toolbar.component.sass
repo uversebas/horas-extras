@@ -1,0 +1,70 @@
+@import '../../../../assets/sass/modules/var'
+@import '../../../../assets/sass/partials/_buttons'
+
+:host 
+	flex: 1 1 100% 
+	display: flex 
+	flex-flow: column
+	font-family: $font
+p
+	color: $neutral-50
+	margin: 0 0 0 0
+    
+.header-aliados
+	display: flex
+	justify-content: space-between
+	align-items: center
+	background: $green-700
+	padding: 10px
+	&.justify-center
+		justify-content: center
+	.logo
+		img
+			margin: 0 0 0 20px
+			width: 50px
+			height: 50px
+
+.info-aliado
+	display: flex
+	align-items: center
+	span
+		display: flex
+		align-items: center
+		border-right: 1px solid $neutral-50
+		height: 30px
+		margin: 0 10px 0 0
+		padding: 0 10px 0 0
+		figure
+			margin: 0
+			img
+				margin: 0 10px 0 0
+	.last-child
+		border-right: none
+	@media screen and (max-width: 898px)
+		display: none
+
+.info-aliado-responsive, .info-aliado-negocio
+	display: none
+	figure
+		margin: 0
+	@media screen and (max-width: 898px)
+		display: block
+
+.info-aliado-negocio
+	background: $blue-100
+	div
+		display: flex
+		align-items: center
+		justify-content: center
+		figure
+			img
+				margin: 0 10px 0 0
+
+.dropdown-menu
+	padding: 0
+	.nombre
+		background: $neutral-100
+		padding: 5px 10px
+	.cerrar-sesion
+		text-align: center
+		padding: 5px 10px 

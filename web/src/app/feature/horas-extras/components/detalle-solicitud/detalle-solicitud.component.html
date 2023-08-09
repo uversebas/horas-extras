@@ -1,0 +1,62 @@
+<div class="modal-header">
+    <h4 class="modal-title pull-left">Detalle solicitud</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="cerrarModal()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="form-group row">
+        <div class="col-md-4">
+            <label class="form-label">Tipo: </label>
+            <span>{{solicitud.tipo}}</span>
+        </div>
+        <div class="col-md-4">
+            <label class="form-label">Días: </label>
+            <span>{{solicitud.dias}}</span>
+        </div>
+        <div class="col-md-4">
+            <label class="form-label">Fecha: </label>
+            <span>{{solicitud.fechaSolicitud| date:'dd-MM-yyyy'}}</span>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-4">
+            <label>Estado: </label>
+            <span>{{solicitud.estado}}</span>
+        </div>
+        <div class="col-md-4">
+            <label>Aprobación lider: </label>
+            <span>{{solicitud.aprobacionLider}}</span>
+        </div>
+        <div class="col-md-4">
+            <label>Aprobación RRHH: </label>
+            <span>{{solicitud.aprobacionRRHH}}</span>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <label>Motivo solicitud</label><br>
+            <span>{{solicitud.motivo}}</span>
+        </div>
+    </div>
+    <br>
+    <div *ngIf="mostrarRazonesRechazo()">
+        <div class="row" *ngIf="solicitud.motivoLider">
+            <div class="col-md-12">
+                <label>Comentario lider</label>
+                <span>{{solicitud.motivoLider}}</span>
+            </div>
+        </div>
+        <div class="row" *ngIf="solicitud.motivoRRHH">
+            <div class="col-md-12">
+                <label>Comentario RRHH</label>
+                <span>{{solicitud.motivoRRHH}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary botonera" (click)="cerrarModal()">Cerrar</button>
+</div>

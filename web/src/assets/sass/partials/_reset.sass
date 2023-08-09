@@ -1,0 +1,86 @@
+@import '../modules/_var'
+
+.form-control
+    height: 40px
+    border: 1px solid $neutral-180
+.card
+    border: 1px solid $neutral-180
+    &.padding-20
+        padding: 20px
+::ng-deep
+    ng-autocomplete
+        .autocomplete-container
+            box-shadow: none
+            .input-container
+                input
+                    border-radius: 4px
+                    border: 1px solid $neutral-180
+                    height: 40px
+
+::ng-deep
+  ngb-toast
+    position: fixed
+    right: 20px
+    z-index: 20
+    img
+      margin: 0 10px 0 0
+
+.toast-success
+  background: $neutral-50
+  color: $neutral-500
+  -webkit-box-shadow: 0px 4px 14px -1px rgba(0,0,0,0.4)
+  -moz-box-shadow: 0px 4px 14px -1px rgba(0,0,0,0.4)
+  box-shadow: 0px 4px 14px -1px rgba(0,0,0,0.4)
+
+th.mat-header-cell
+  background: $neutral-100
+  color: $neutral-500
+  font-size: 14px
+
+th.mat-header-cell, td.mat-cell, td.mat-footer-cell
+  padding: 10px 15px
+
+th.mat-header-cell, td.mat-cell, td.mat-footer-cell
+  white-space: nowrap
+
+tr.mat-row, tr.mat-footer-row, tr.mat-header-row
+  height: 44px
+
+.table-responsive
+  border: 1px solid $neutral-200
+  border-radius: 3px
+
+.modal-body
+  text-align: center
+  padding-bottom: 0
+  p
+    margin-top: 15px
+.modal-footer
+  border: none
+  display: flex
+  justify-content: center
+
+.ayuda-contextual
+  background: $neutral-100
+  border-radius: 4px
+  padding: 10px
+  border: 1px solid $blue-300
+  &.border-informacion
+    border: 1px solid #0066D6
+  &.border-error-alert
+    border: 1px solid #DF1B05
+  img
+    margin: 0 10px 0 0
+  .info, .error
+    font-weight: 400
+
+.accordion-button:not(.collapsed)
+  background: $neutral-100
+  color: $neutral-500
+
+.accordion-item
+  border: 1px solid $neutral-200
+  button
+    padding: 0.4rem 1rem
+    font-size: 15px
+

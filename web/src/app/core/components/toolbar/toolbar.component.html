@@ -1,0 +1,38 @@
+<header class="header-aliados">
+    <div class="actions-leftbar">
+        <a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" class="burger-menu"><img src="../../../../assets/svg/burger-menu.svg" alt="Menú"></a>
+        <a href="/" class="logo"><img src="../../../../assets/svg/logo.png" alt="Logo"></a>
+    </div>
+    <div class="info-aliado">
+        <span *ngIf="esUsuarioLogueado">
+            <figure>
+                <img src="../../../../assets/svg/user-aliado.svg" alt="Icono aliado usuario">
+            </figure>
+            <p>Hola, <strong>{{(nombre$ | async)}}</strong></p>
+        </span>        
+        <button class="boton-base boton-link-blanco" *ngIf = "!esUsuarioLogueado" (click) = "login()">Iniciar sesión</button>
+        <button class="boton-base boton-link-blanco icono" *ngIf = "esUsuarioLogueado" (click)= "logout()"> <img src="../../../../assets/svg/ic-logout.svg" alt="icono cerrar sesión">Cerrar sesión </button>
+       
+    </div>
+    <div class="info-aliado-responsive">
+        <a *ngIf="!esUsuarioLogueado" (click)="login()" >
+            <figure>
+                <img src="/assets/svg/ic-user-dropdown.svg" alt="Icono aliado usuario">
+            </figure>
+            <p>Iniciar sesión</p>
+        </a>
+        <div>
+            <a role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="esUsuarioLogueado">
+                <figure>
+                    <img src="/assets/svg/ic-user-dropdown.svg" alt="Icono aliado usuario">
+                </figure>
+            </a>
+            <ul *ngIf="esUsuarioLogueado" class="dropdown-menu">
+                <li class="nombre">Hola, <strong>{{(nombre$ | async)}}</strong></li>
+                <li class="cerrar-sesion"><a class="dropdown-item boton-base boton-link-normal" (click)="logout()"><img src="/assets/svg/ic-logout-blue.svg" alt="icono cerrar sesión"> Cerrar sesión </a></li>
+            </ul> 
+        </div>
+    </div>
+</header>
+<router-outlet></router-outlet>
+<app-spinner></app-spinner>

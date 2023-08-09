@@ -1,0 +1,41 @@
+<div class="modal-header">
+    <h4 class="modal-title pull-left">Detalle solicitud</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="cerrarModal()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<form *ngIf="aprobarSolicitudForm" [formGroup]="aprobarSolicitudForm" (ngSubmit)="enviarSolicitud()">
+    <div class="modal-body">
+        <div class="form-group row">
+            <div class="col-md-4">
+                <label class="form-label">Tipo: </label>
+                <span>{{solicitud.tipo}}</span>
+            </div>
+            <div class="col-md-4">
+                <label class="form-label">Días: </label>
+                <span>{{solicitud.dias}}</span>
+            </div>
+            <div class="col-md-4">
+                <label class="form-label">Fecha: </label>
+                <span>{{solicitud.fechaSolicitud| date:'dd-MM-yyyy'}}</span>
+            </div>
+        </div>
+        <br>
+        <div class="line"></div>
+        <br>
+        <div class="form-group row">
+            <div class="col-md-12">
+                <div class="col-md-12">
+                    <textarea autosize name="comentario" id="comentario" formControlName="comentario" class="form-control" rows="3"
+                        placeholder="Escriba un comentario..." style="resize: none"></textarea>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary botonera" (click)="cerrarModal()">Cerrar</button>
+        <button type="submit" class="btn btn-primary botonera" [disabled]="aprobarSolicitudForm.invalid" (click)="rechazarSolicitud()">Rechazar</button>
+        <button type="submit" class="btn btn-primary botonera" [disabled]="aprobarSolicitudForm.invalid" (click)="aprobarSolicitud()">Aprobar</button>
+    </div>
+</form>

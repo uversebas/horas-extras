@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server
+    ports:
+      - '1433:1433'
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=pruebahx*1234
+  app:
+    build:
+      context: ./back
+      dockerfile: ./Dockerfile
+    depends_on:
+      - db
+    ports:
+      - 7243:80
+      - 7244:443
+  web:
+    build:
+      context: ./web
+      dockerfile: ./Dockerfile
+    depends_on:
+      - db
+    ports:
+      - 4200:80

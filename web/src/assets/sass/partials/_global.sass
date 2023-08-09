@@ -1,0 +1,270 @@
+@import '../modules/_var'
+  
+h1
+    font-size: $titulo-h1 !important
+h2
+    font-size: $subtitulo-h2 !important
+h3
+    font-size: $subtitulo-h3
+h4
+    font-size: $subtitulo-h4
+label
+    color: $neutral-500
+    font-size: $parrafo
+    span
+        color: $danger
+.d-flex-justify-end
+    display: flex
+    justify-content: flex-end
+.d-flex-justify-between
+    display: flex
+    justify-content: space-between
+.d-flex-justify-center
+    display: flex
+    justify-content: center
+
+.general-content
+    padding: 30px
+
+.line
+  width: 100%
+  height: 1px
+  background-color: #000
+
+/* Structure */
+.example-container
+  position: relative
+
+.example-table-container
+  position: relative
+
+table
+  width: 100%
+
+.example-rate-limit-reached
+  max-width: 360px
+  text-align: center
+
+.mat-column-number,
+.mat-column-state
+  max-width: 64px
+
+.mat-column-created
+  max-width: 124px
+
+mat-form-field
+  width: 100%
+
+.rango-fechas
+  display: flex
+  @media screen and (max-width: 898px)
+    flex-direction: column
+  .date-input
+    display: flex
+    position: relative
+    width: 50%
+    // border: 1px solid #c1c1c1
+    // border-radius: 4px
+    // height: 40px
+    &:first-child
+      margin: 0 25px 0 0
+    @media screen and (max-width: 898px)
+      width: 100%
+      margin: 0 0 15px 0 !important
+    input
+      cursor: pointer
+      z-index: 2
+      background: transparent
+    button
+      position: absolute
+      right: 0
+      height: 40px
+      width: 45px
+      border-radius: 0px 6px 6px 0px
+      padding: 7px 10px
+      img
+        cursor: pointer
+        opacity: 0
+
+.flex-between
+  display: flex
+  justify-content: space-between
+  align-items: center
+  @media screen and (max-width: 898px)
+    flex-direction: column
+    button
+      width: 100%
+
+.flex-end
+  display: flex
+  justify-content: flex-end
+  align-items: flex-start
+  flex-direction: column
+  button
+    img
+      margin: 0 5px 0 0
+  @media screen and (max-width: 898px)
+    align-items: flex-start
+    button
+      width: 100%
+
+.export
+  margin: 20px 0 10px 0
+  font-weight: 500
+
+.cont-checks
+  width: 100%
+
+/* Custom check */
+.container-check
+  display: block
+  position: relative
+  padding-left: 35px
+  cursor: pointer
+  font-size: 14px
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  margin: 0 15px 0 0
+  .label-check
+    color: $neutral-500
+    padding: 3px 0 0 0
+  input
+    position: absolute
+    opacity: 0
+    cursor: pointer
+    height: 0
+    width: 0
+    &:checked ~ .checkmark-check
+      background-color: $blue-300
+      border: 1px solid $blue-50
+      &::after
+        display: block
+  .checkmark-check
+    border-radius: 2px
+    position: absolute
+    top: 0
+    left: 0
+    height: 25px
+    width: 25px
+    background-color: $neutral-50
+    border: 1px solid $neutral-350
+    &::after
+      content: ""
+      position: absolute
+      display: none
+      left: 9px
+      top: 2px
+      width: 6px
+      height: 15px
+      border: solid $neutral-50
+      border-width: 0 2px 2px 0
+      -webkit-transform: rotate(45deg)
+      -ms-transform: rotate(45deg)
+      transform: rotate(45deg)
+
+.cont-check
+  border: 1px solid #c1c1c1
+  width: 120px
+  height: 40px
+  padding: 6px
+  border-radius: 4px
+  margin: 0 15px 0 0
+  @media screen and (max-width: 898px)
+    width: 100%
+    margin: 0 0 10px 0
+
+/* Custom radio */
+.container-radio
+  display: block
+  position: relative
+  padding-left: 35px
+  margin-bottom: 12px
+  cursor: pointer
+  font-size: 14px
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  input
+    position: absolute
+    opacity: 0
+    cursor: pointer
+    &:checked ~ .checkmark-radio
+      background-color: $blue-300
+      border: 1px solid $blue-50
+      &::after
+        display: block
+  .checkmark-radio
+    position: absolute
+    top: 0
+    left: 0
+    height: 25px
+    width: 25px
+    border-radius: 50%
+    background-color: $neutral-50
+    border: 1px solid $neutral-350
+    &::after
+      content: ""
+      position: absolute
+      display: none
+      top: 7px
+      left: 7px
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      background: white
+
+/* Custom toggle */
+.switch
+  position: relative
+  display: inline-block
+  width: 44px
+  height: 22px
+  input
+    opacity: 0
+    width: 0
+    height: 0
+
+.slider
+  position: absolute
+  cursor: pointer
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: #B4B4B4
+  -webkit-transition: .4s
+  transition: .4s
+  &::before
+    position: absolute
+    content: ""
+    height: 18px
+    width: 18px
+    left: 2px
+    bottom: 2px
+    background-color: $neutral-50
+    -webkit-transition: .4s
+    transition: .4s
+  &.round
+    border-radius: 34px
+  &::before
+    border-radius: 50%
+
+input
+  &:checked + .slider
+    background-color: #3876b8
+    &::before
+      -webkit-transform: translateX(22px)
+      -ms-transform: translateX(22px)
+      transform: translateX(22px)
+  &:focus + .slider
+    box-shadow: 0 0 1px #2196f3
+
+.ancho-img
+  width: 18px
+  @media (max-width: $breakpoint-mobile)
+    width: 26px
+    margin-bottom: 12px
+    padding-top: 14px

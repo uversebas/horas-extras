@@ -1,0 +1,37 @@
+@import '../../../../assets/sass/modules/var'
+
+.sidebar
+    background: $neutral-100
+    -webkit-box-shadow: 3px 4px 29px -8px rgba(0,0,0,0.29)
+    -moz-box-shadow: 3px 4px 29px -8px rgba(0,0,0,0.29)
+    box-shadow: 3px 4px 29px -8px rgba(0,0,0,0.29)
+    ul
+        margin: 0
+        height: 100vh
+        padding-left: 0
+        li
+            border-bottom: 2px solid transparent
+            cursor: pointer
+            padding: 15px 10px
+            transition: all ease-in-out 0.3s
+            &.active
+                background: $neutral-150
+                border-bottom: 2px solid $blue-400
+            a
+                text-decoration: none
+                color: $neutral-500
+                img
+                    width: 30px
+            &:hover
+                background: $neutral-150
+
+
+
+.offcanvas.offcanvas-start
+   top: 50px
+   width: 200px
+   @media screen and (max-width: 898px)
+        top: 50px
+
+::ng-deep .offcanvas-backdrop.show 
+    opacity: 0

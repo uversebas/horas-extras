@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 250 250">
+  <g id="ic-Informes" transform="translate(-2300 1374)">
+    <rect id="Rectangle_1162" data-name="Rectangle 1162" width="250" height="250" transform="translate(2300 -1374)" fill="none"/>
+    <g id="Group_1701" data-name="Group 1701" transform="translate(-324.934 -1511.506)">
+      <line id="Line_44" data-name="Line 44" x2="103.485" transform="translate(2698.192 204.498)" fill="none" stroke="#50a3ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="9"/>
+      <line id="Line_45" data-name="Line 45" x2="54.869" transform="translate(2701.865 240.331)" fill="none" stroke="#50a3ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="9"/>
+      <line id="Line_46" data-name="Line 46" x2="37.094" transform="translate(2701.865 337.912)" fill="none" stroke="#50a3ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="9"/>
+      <path id="Path_1405" data-name="Path 1405" d="M2708.675,161.506h-19.824a22.639,22.639,0,0,0-22.639,22.639v156.84a22.639,22.639,0,0,0,22.639,22.639h122.166a22.639,22.639,0,0,0,22.639-22.639V184.145a22.639,22.639,0,0,0-22.639-22.639Z" fill="none" stroke="#50a3ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="9"/>
+      <path id="Path_1406" data-name="Path 1406" d="M2814.318,311.256v17.111a9.545,9.545,0,0,1-9.544,9.545h-31.417a9.545,9.545,0,0,1-9.545-9.545V296.95a9.544,9.544,0,0,1,9.545-9.544h31.417" fill="none" stroke="#ffd100" stroke-linecap="round" stroke-linejoin="round" stroke-width="9"/>
+      <path id="Path_1407" data-name="Path 1407" d="M2774.234,314.062l10.923,10.923L2824.84,285.3" fill="none" stroke="#ffd100" stroke-linecap="round" stroke-linejoin="round" stroke-width="9"/>
+    </g>
+  </g>
+</svg>
